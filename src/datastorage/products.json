@@ -179,361 +179,210 @@
     },
     {
         "id": 11,
-        "title": "book",
-        "description": "english book",
-        "code": "124667",
-        "price": 213,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 214,
-        "category": "books",
-        "thumbnails": []
+        "stock": 2467,
+        "category": "Books",
+        "thumbnails": [
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
+        ]
     },
     {
         "id": 12,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 13,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 14,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 15,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 16,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 17,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 18,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 4646,
         "status": true,
-        "stock": 1000,
+        "stock": 2467,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 19,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 1000,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 20,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 70,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 1000,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/132x100.png/5fa2dd/ffffff,   http://dummyimage.com/135x100.png/dddddd/000000,   http://dummyimage.com/108x100.png/5fa2dd/ffffff,  http://dummyimage.com/125x100.png/cc0000/ffffff,   http://dummyimage.com/119x100.png/ff4444/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 21,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 769,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 1000,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 22,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 435,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 234,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 23,
-        "title": "Chopsticks",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 436,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 1222,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 24,
-        "title": "CCCCCCCCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 436,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 1245,
         "status": true,
-        "stock": 1222,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 25,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 129,
         "status": true,
-        "stock": 156767,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     },
     {
         "id": 26,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
+        "title": "Indonesian Book",
+        "description": "Learn Indonesian Language",
+        "code": "1574IN",
+        "price": 129,
         "status": true,
-        "stock": 156767,
+        "stock": 12456,
+        "category": "Books",
         "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 27,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 28,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 29,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 30,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 31,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 32,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 33,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 34,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 35,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 36,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 37,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 38,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 39,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
-        ]
-    },
-    {
-        "id": 40,
-        "title": "CCCC",
-        "description": "Chinese Chopsticks",
-        "code": "1583PC",
-        "price": 124,
-        "status": true,
-        "stock": 156767,
-        "thumbnails": [
-            "http://dummyimage.com/218x100.png/5fa2dd/ffffff"
+            "http://dummyimage.com/209x100.png/ff4444/ffffff"
         ]
     }
 ]

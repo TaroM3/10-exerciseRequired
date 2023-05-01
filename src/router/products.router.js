@@ -2,6 +2,7 @@ const { Router, json, query } = require('express')
 const { getProductsFromServer, getProductFromServer, addProductOnServer, updProductOnServer, delProductOnServer } = require('./../controllers/ProductController')
 const ProductManager = require('./../helpers/ProductManager')
 const router = Router()
+//const socket = io()
 
 // GET  /api/products[?:limit=N] 
 router.get('/', getProductsFromServer )
@@ -22,8 +23,9 @@ router.post('/', (req, res) => {
         price: parseFloat(arrayQuery[3]), 
         status: true,
         stock: parseInt(arrayQuery[5]),
+        category: arrayQuery[6],
         thumbnails: [
-            arrayQuery[6]
+            arrayQuery[7]
         ]
 
     } 
@@ -51,6 +53,16 @@ router.put('/:pid', (req, res) => {
 } ) 
 
 // DELETE /api/products/:pid
-router.delete('/:pid', delProductOnServer)
+router.delete('/:pid', (req, res) => {
+    
+    let id = parseInt(req.params.pid)
+    const product = new ProductManager()
+    //socket.on('')
+
+    console.log(id)
+    //socket.emit('delete', {id})
+    product.deleteProductById(id).then(res.send(200, 'Product has been deleted.'))
+    
+})
 
 module.exports = router

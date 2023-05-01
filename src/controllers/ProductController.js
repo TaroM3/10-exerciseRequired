@@ -1,7 +1,6 @@
 const ProductManager = require('./../helpers/ProductManager')
 let info = {}
 
-
 const getAllProductsFromServer = async () => {
     
 }
@@ -141,6 +140,7 @@ const updProductOnServer = async (req, res) => {
 const delProductOnServer = async (req, res) => {
     const product = new ProductManager()
     const id = parseInt(req.params.pid)
+    //socket.on('')
     product.deleteProductById(id).then(res.send(200, 'success'))
 }
 

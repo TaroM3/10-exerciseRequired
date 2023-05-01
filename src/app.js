@@ -42,6 +42,10 @@ io.on('connection', socket => {
     socket.on('productAdded', data => {
         io.emit('logs', data)
     })
+    socket.on('delete', id => {
+        console.log('Deleting Product...')
+        io.emit('productDeleted', id)
+    })
 })
 
     /*socket.on('message', data => {
