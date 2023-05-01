@@ -1,0 +1,33 @@
+    Soy la pagina realTimeProducts
+<div id="container">
+    {{#each product}}
+        <div id={{this.id}}>
+            <h2>
+                Id: <i id="id">{{this.id}}</i>
+            </h2>
+            <h2>
+                Product: <i id="title">{{this.title}}</i>
+            </h2>
+            <p>
+                Description: <i id="description">{{this.description}}</i>
+            </p>
+            <p>
+                Price: <i id="price">{{this.price}}</i>
+            </p>
+            <p>
+                Stock: <i id="stock">{{this.stock}}</i>
+            </p>
+            <p>
+                Category: <i id="category">{{this.category}}</i>
+            </p>
+            <p>
+                {{#each this.thumbnails}}
+                    <img src={{this}} alt="" id="thumbnails">
+                {{/each}}
+            </p>
+        </div>
+    {{/each}}
+</div>
+<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+<script src="js/socketCliente.js" type="text/javascript"></script>
+
