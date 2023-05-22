@@ -1,83 +1,109 @@
-const express = require('express')
-const chatRouter = require('./router/chat.router')
-const productRouter = require('./router/products.router')
-const cartRouter = require('./router/carts.router')
-const homeRouter = require('./router/home.router')
-const realTimeProductsRouter = require('./router/realTimeProducts.router')
-const productForm = require('./router/productForm.router')
-const handlebars = require('express-handlebars')
-const { Server, Socket } = require('socket.io')
-const server = express()
-const ProductManager = require('./Dao/helpers/ProductManager')
+const express = require("express");
+const chatRouter = require("./router/chat.router");
+const productRouter = require("./router/products.router");
+const cartRouter = require("./router/carts.router");
+const homeRouter = require("./router/home.router");
+const realTimeProductsRouter = require("./router/realTimeProducts.router");
+const productForm = require("./router/productForm.router");
+const handlebars = require("express-handlebars");
+const { Server, Socket } = require("socket.io");
+const server = express();
+const ProductManager = require("./Dao/helpers/ProductManager");
 // import mongoose from 'mongoose'
-const mongoose = require('mongoose')
-const httpServer = server.listen(8080, () => console.log('Server Up'))
+const mongoose = require("mongoose");
+const productModel = require("./Dao/models/product.model");
+const httpServer = server.listen(8080, () => console.log("Server Up"));
 /*server.use((req, res, next) => {
     console.log('Time: ', new Date().toLocaleString())
     next()
 })*/
 
+const uri =
+  "mongodb+srv://taromelillo:Hw8C2a43e6CXWHK6@cluster0.4lcw6qm.mongodb.net/";
 
-const uri = 'mongodb+srv://taromelillo:Hw8C2a43e6CXWHK6@cluster0.4lcw6qm.mongodb.net/'
-
-const main = async() => {
-
+const main = async () => {
+   
     await mongoose.connect(uri, {
-        dbName: 'ecommerce'
-    })
-    console.log('-----DB connected----')
-}
+    dbName: "ecommerce",
+  
+});
+  console.log("-----DB connected----");
 
-main()
-const io = new Server(httpServer)
-server.use(express.urlencoded({extended : true}))
-server.use(express.json())
+//   await productModel.create(
+//     {
+//       title: "Indonesian Book",
+//       description: "Learn Indonesian Language",
+//       code: "1574IN",
+//       price: 129,
+//       status: true,
+//       stock: 12456,
+//       category: "Books",
+//       thumbnails: ["http://dummyimage.com/209x100.png/ff4444/ffffff"],
+//     }
+//   );
 
+///////////////////////////////////////////////////////////////////
+//   let productsCollection = [];
+//   productsCollection = await productModel.find();
+//   console.log(JSON.stringify(productsCollection, null, "\t"));
+//   console.log(productsCollection[0]._id.toString());
+///////////////////////////////////////////////////////////////////
 
-server.engine('handlebars', handlebars.engine())
-server.set('views', 'src/views')
-server.set('view engine', 'handlebars')
+  // console.log(productsCollection.)
+  // console.log(JSON.stringify(productsCollection.title , null , '\t'))
+};
 
-server.use('/home', homeRouter)
+main();
+const io = new Server(httpServer);
+server.use(express.urlencoded({ extended: true }));
+server.use(express.json());
 
-server.use(express.static('src/views'))
-server.use('/', productForm)
+server.engine("handlebars", handlebars.engine());
+server.set("views", "src/views");
+server.set("view engine", "handlebars");
 
-server.use('/realTimeProducts', realTimeProductsRouter)
+server.use("/home", homeRouter);
+
+server.use(express.static("src/views"));
+server.use("/", productForm);
+
+server.use("/realTimeProducts", realTimeProductsRouter);
 
 //server.use('')
-server.use('/api/products', productRouter)
+server.use("/api/products", productRouter);
 
 //server.use('/products/:pid', productRouter)
 
-server.use('/api/carts', cartRouter)
+server.use("/api/carts", cartRouter);
 
-server.use('/chat', chatRouter)
+server.use("/chat", chatRouter);
 
-const products = new ProductManager()
-let messages = []
+const products = new ProductManager();
+let messages = [];
 
-io.on('connection', socket => {
-    console.log('Time: ', new Date().toLocaleString() +' Client socket ' + socket.id + ' connected')
-    socket.on('productAdded', data => {
-        products.addProduct(data.product)
-        io.emit('logs', data)
-    })
-    socket.on('delete', id => {
-        console.log(id.id)
-        products.deleteProductById(id.id)
-        console.log('Deleting Product...')
-        io.emit('productDeleted', id)
-    })
-    socket.on('message', data => {
-        console.log(data)
-        messages.push(data)
-        //console.log(messages)
-        io.emit('conversations', data)
-    })
-})
+io.on("connection", (socket) => {
+  console.log(
+    "Time: ",
+    new Date().toLocaleString() + " Client socket " + socket.id + " connected"
+  );
+  socket.on("productAdded", (data) => {
+    products.addProduct(data.product);
+    io.emit("logs", data);
+  });
+  socket.on("delete", (id) => {
+    console.log(id.id);
+    products.deleteProductById(id.id);
+    console.log("Deleting Product...");
+    io.emit("productDeleted", id);
+  });
+  socket.on("message", (data) => {
+    console.log(data);
+    messages.push(data);
+    //console.log(messages)
+    io.emit("conversations", data);
+  });
+});
 
-    /*socket.on('message', data => {
+/*socket.on('message', data => {
         io.emit('logs', data) 
     })*/
-

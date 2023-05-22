@@ -1,10 +1,12 @@
 const { Router } = require('express')
+const messageModel = require('../Dao/models/message.model')
 
 
 const router = Router()
 
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    const messagesDb = await messageModel.find().lean().exec()
     res.render('chat')
 })
 
