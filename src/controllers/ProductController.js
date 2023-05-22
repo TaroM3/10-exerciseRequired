@@ -1,4 +1,4 @@
-const ProductManager = require('./../helpers/ProductManager')
+const ProductManager = require('../Dao/helpers/ProductManager')
 let info = {}
 
 const getAllProductsFromServer = async () => {

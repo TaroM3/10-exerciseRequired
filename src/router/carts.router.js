@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const {getProductsCartFromServer, addCartOnServer, addProductCartOnServer} = require('./../controllers/CartController')
-const CartManager = require('../helpers/CartManager')
-const ProductManager = require('../helpers/ProductManager')
+const CartManager = require('../Dao/helpers/CartManager')
+const ProductManager = require('../Dao/helpers/ProductManager')
 const router = Router()
 
 //POST /api/carts/ 

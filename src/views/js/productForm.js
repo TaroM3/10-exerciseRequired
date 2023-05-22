@@ -1,15 +1,17 @@
 let socket = io()
 
 let button = document.getElementById('addProduct')
-let title = document.getElementById('title')
-let description = document.getElementById('description')
-let code = document.getElementById('code')
-let status = document.getElementById('status')
-let category = document.getElementById('category')
-let thumbnails = document.getElementById('thumbnails')
+let title = document.getElementById('titleAdd')
+let description = document.getElementById('descriptionAdd')
+let code = document.getElementById('codeAdd')
+let status = document.getElementById('statusAdd')
+let category = document.getElementById('categoryAdd')
+let thumbnails = document.getElementById('thumbnailsAdd')
+let price = document.getElementById('priceAdd')
+let stock = document.getElementById('stockAdd')
 
 let btnDelete = document.getElementById('btn-deleteProduct')
-let idDelete = document.getElementById('id')
+let idDelete = document.getElementById('idDelete')
 
 socket.on('')
 button.addEventListener('click', () => {
@@ -19,7 +21,7 @@ button.addEventListener('click', () => {
             title: title.value,
             description: description.value,
             code: code.value,
-            price: parseFloat(price.value), 
+            price: parseFloat(price.value),
             status: true,
             stock: parseInt(stock.value),
             category: category.value,
@@ -37,10 +39,10 @@ button.addEventListener('click', () => {
 //socket.on('')
 btnDelete.addEventListener('click', () => {
     
-    if(id.value.trim().length !== 0){
-        let id = idDelete.value
-        const deletForm = document.getElementById('deleteForm')
-        deletForm.setAttribute('action', "http://localhost:8080/api/products/"+id)
+    if(idDelete.value.trim().length !== 0){
+        let id = parseInt(idDelete.value)
+        //const deletForm = document.getElementById('deleteForm')
+        //deletForm.setAttribute('action', "http://localhost:8080/api/products/"+id)
         socket.on('')
         socket.emit('delete' , {id})
     }else{

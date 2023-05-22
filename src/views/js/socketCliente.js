@@ -1,4 +1,4 @@
-console.log('Hola mundo')
+// console.log('Hola mundo')
 //const ProductManager = require('../../helpers/ProductManager')
 const socket = io()
 //const products = new ProductManager()

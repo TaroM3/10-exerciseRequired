@@ -1,4 +1,4 @@
-const CartManager = require('./../helpers/CartManager')
+const CartManager = require('../Dao/helpers/CartManager')
 
 // Get a cart from server
 const getProductsCartFromServer = async (req, res) => {

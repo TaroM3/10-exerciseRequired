@@ -1,6 +1,6 @@
 const { Router, json, query } = require('express')
 const { getProductsFromServer, getProductFromServer, addProductOnServer, updProductOnServer, delProductOnServer } = require('./../controllers/ProductController')
-const ProductManager = require('./../helpers/ProductManager')
+const ProductManager = require('../Dao/helpers/ProductManager')
 const router = Router()
 //const socket = io()
 
