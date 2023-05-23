@@ -83,21 +83,32 @@ const main = async () => {
       "Time: ",
       new Date().toLocaleString() + " Client socket " + socket.id + " connected"
     );
-    socket.on("productAdded", (data) => {
-      products.addProduct(data.product);
+    socket.on("productAdded", async (data) => {
+      await productModel.create({
+        title: data.product.title,
+        description: data.product.description,
+        code: data.product.code,
+        price: data.product.price,
+        status: data.product.status,
+        stock: data.product.stock,
+        category: data.product.category,
+        thumbnails: data.product.thumbnails,
+      });
+      //   products.addProduct(data.product);
       io.emit("logs", data);
     });
-    socket.on("delete", (id) => {
+    socket.on("delete", async(id) => {
       console.log(id.id);
-      products.deleteProductById(id.id);
+     await productModel.findByIdAndDelete(id.id)
+      //products.deleteProductById(id.id);
       console.log("Deleting Product...");
       io.emit("productDeleted", id);
     });
     socket.on("message", async (data) => {
-        let messageDb = await messageModel.create({
-            user: data.user,
-            message: data.message
-        })
+      await messageModel.create({
+        user: data.user,
+        message: data.message,
+      });
       console.log(data);
       messages.push(data);
       //console.log(messages)

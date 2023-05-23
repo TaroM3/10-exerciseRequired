@@ -14,16 +14,16 @@
 
 <h1>Delete a Product</h1>
 <form method="delete" id="deleteForm">
-        Enter the Product Id: <input type="number" name="id" id="idDelete"><br>
+        Enter the Product Id: <input type="text" name="id" id="idDelete"><br>
         <input type="submit" value="Delete" id="btn-deleteProduct">
 </form>
 
 
 <div id="container">
     {{#each product}}
-        <div id={{this.id}}>
+        <div id={{this._id}}>
             <h2>
-                Id: <i id="id">{{this.id}}</i>
+                Id: <i id="id">{{this._id}}</i>
             </h2>
             <h2>
                 Product: <i id="title">{{this.title}}</i>
@@ -52,6 +52,5 @@
     {{/each}}
 </div>
 <script src="/socket.io/socket.io.js" type="text/javascript"></script>
-<script src="js/productForm.js" type="text/javascript"></script>
-<script src="js/socketCliente.js" type="text/javascript"></script>
+<script src="js/realTimeProducts.io.js"></script>
 
