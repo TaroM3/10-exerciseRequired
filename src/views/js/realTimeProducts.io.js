@@ -89,7 +89,8 @@ socket.on ('logs', data => {
     
     //div-container "product id" 
     const divId = document.createElement('div')
-    divId.setAttribute('id', newId)
+    divId.setAttribute('id', data.product._id)
+    console.log(data.product._id)
 
     //h2 Id
     const h2Id = document.createElement('h2')

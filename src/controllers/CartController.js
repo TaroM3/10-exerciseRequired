@@ -18,6 +18,7 @@ const getProductsCartFromServer = async (req, res) => {
 // add o creates a cart to the server
 const addCartOnServer = async (req, res) => {
     const carts = new CartManager()
+    
     carts.addCart().then(res.status(200).send('A cart has been created'))
     //res.send('POST one /carts')
 }

@@ -84,7 +84,7 @@ const main = async () => {
       new Date().toLocaleString() + " Client socket " + socket.id + " connected"
     );
     socket.on("productAdded", async (data) => {
-      await productModel.create({
+      let product = await productModel.create({
         title: data.product.title,
         description: data.product.description,
         code: data.product.code,
@@ -95,7 +95,7 @@ const main = async () => {
         thumbnails: data.product.thumbnails,
       });
       //   products.addProduct(data.product);
-      io.emit("logs", data);
+      io.emit("logs", product);
     });
     socket.on("delete", async(id) => {
       console.log(id.id);
