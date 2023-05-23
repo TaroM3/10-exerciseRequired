@@ -35,7 +35,7 @@ router.post('/:cid/product/:pid', async(req, res) => {
             let result = await cartModel.updateOne({_id: req.params.cid}, cart)
             console.log(result)  
 
-            res.status(200).send(cart)
+            res.status(200).send(result + 'Product added to the Cart successfully')
             
        
             // console.log('Product does not exist')      
