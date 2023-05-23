@@ -6,8 +6,8 @@ const router = Router()
 
 
 router.get('/', async (req, res) => {
-    const messagesDb = await messageModel.find().lean().exec()
-    res.render('chat')
+    const messages = await messageModel.find().lean().exec()
+    res.render('chat', { messages })
 })
 
 module.exports = router

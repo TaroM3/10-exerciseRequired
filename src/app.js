@@ -12,22 +12,11 @@ const ProductManager = require("./Dao/helpers/ProductManager");
 // import mongoose from 'mongoose'
 const mongoose = require("mongoose");
 const productModel = require("./Dao/models/product.model");
-const httpServer = server.listen(8080, () => console.log("Server Up"));
+const messageModel = require("./Dao/models/message.model");
 /*server.use((req, res, next) => {
     console.log('Time: ', new Date().toLocaleString())
     next()
 })*/
-
-const uri =
-  "mongodb+srv://taromelillo:Hw8C2a43e6CXWHK6@cluster0.4lcw6qm.mongodb.net/";
-
-const main = async () => {
-   
-    await mongoose.connect(uri, {
-    dbName: "ecommerce",
-  
-});
-  console.log("-----DB connected----");
 
 //   await productModel.create(
 //     {
@@ -49,11 +38,10 @@ const main = async () => {
 //   console.log(productsCollection[0]._id.toString());
 ///////////////////////////////////////////////////////////////////
 
-  // console.log(productsCollection.)
-  // console.log(JSON.stringify(productsCollection.title , null , '\t'))
-};
+// console.log(productsCollection.)
+// console.log(JSON.stringify(productsCollection.title , null , '\t'))
 
-main();
+const httpServer = server.listen(8080, () => console.log("Server Up"));
 const io = new Server(httpServer);
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
@@ -78,32 +66,47 @@ server.use("/api/carts", cartRouter);
 
 server.use("/chat", chatRouter);
 
-const products = new ProductManager();
-let messages = [];
+const uri =
+  "mongodb+srv://taromelillo:Hw8C2a43e6CXWHK6@cluster0.4lcw6qm.mongodb.net/";
 
-io.on("connection", (socket) => {
-  console.log(
-    "Time: ",
-    new Date().toLocaleString() + " Client socket " + socket.id + " connected"
-  );
-  socket.on("productAdded", (data) => {
-    products.addProduct(data.product);
-    io.emit("logs", data);
+const main = async () => {
+  await mongoose.connect(uri, {
+    dbName: "ecommerce",
   });
-  socket.on("delete", (id) => {
-    console.log(id.id);
-    products.deleteProductById(id.id);
-    console.log("Deleting Product...");
-    io.emit("productDeleted", id);
-  });
-  socket.on("message", (data) => {
-    console.log(data);
-    messages.push(data);
-    //console.log(messages)
-    io.emit("conversations", data);
-  });
-});
+  console.log("-----DB connected----");
 
+  const products = new ProductManager();
+  let messages = [];
+
+  io.on("connection", (socket) => {
+    console.log(
+      "Time: ",
+      new Date().toLocaleString() + " Client socket " + socket.id + " connected"
+    );
+    socket.on("productAdded", (data) => {
+      products.addProduct(data.product);
+      io.emit("logs", data);
+    });
+    socket.on("delete", (id) => {
+      console.log(id.id);
+      products.deleteProductById(id.id);
+      console.log("Deleting Product...");
+      io.emit("productDeleted", id);
+    });
+    socket.on("message", async (data) => {
+        let messageDb = await messageModel.create({
+            user: data.user,
+            message: data.message
+        })
+      console.log(data);
+      messages.push(data);
+      //console.log(messages)
+      io.emit("conversations", data);
+    });
+  });
+};
+
+main();
 /*socket.on('message', data => {
-        io.emit('logs', data) 
-    })*/
+            io.emit('logs', data) 
+        })*/
