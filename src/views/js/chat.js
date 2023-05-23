@@ -40,10 +40,10 @@ Swal.fire({
             console.log(messages.user)
             const messagesLog = document.getElementById('messagesLog')
 
-                let completedMessage = document.createElement('p')
+                // let completedMessage = document.createElement('p')
 
                 let userMessage = document.createElement('i')
-                let userMessageText= document.createTextNode(messages.user + ': ')
+                let userMessageText= document.createTextNode('['+messages.user + ']: ')
                 userMessage.appendChild(userMessageText)
 
                 let messageContent = document.createElement('p')

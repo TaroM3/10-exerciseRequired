@@ -22,8 +22,15 @@ router.get('/:pid', async (req, res) =>{
 // POST /api/products
 router.post('/', async(req, res) => {
 
-    const productNew = req.body
-    await productModel.create({...req.body})
+    // const productNew = req.body
+    try {
+        let productAdded = await productModel.create({...req.body})
+        
+        res.status(200).send('Product has been added: \n' + productAdded)
+    } catch (error) {
+        console.log(error)
+        res.status(400).send('Product couldnt be added.')
+    }
     //const data = req.body
     // const product = new ProductManager()
     // let arrayQuery = Object.values(req.body)
@@ -51,7 +58,6 @@ router.post('/', async(req, res) => {
     //         res.send(200, 'Product added')
     //     }
     //     })
-    //res.send(200,'Product added' )
 })
 
 // PUT /api/products/:pid 
@@ -75,15 +81,24 @@ router.put('/:pid', async (req, res) => {
 } ) 
 
 // DELETE /api/products/:pid
-router.delete('/:pid', (req, res) => {
+router.delete('/:pid', async(req, res) => {
     
-    let id = parseInt(req.params.pid)
-    const product = new ProductManager()
+    try {
+        await productModel.deleteOne({_id: req.params.pid})
+        
+        let id = req.params.pid
+        console.log('Product '+id+' has been deleted.')
+        res.status(200).send('Product '+id+' has been deleted.')
+        
+    } catch (error) {
+        res.status(400).send('Product could not found.')
+    }
+    
+    // const product = new ProductManager()
     //socket.on('')
 
-    console.log(id)
     //socket.emit('delete', {id})
-    product.deleteProductById(id).then(res.send(200, 'Product has been deleted.'))
+    // product.deleteProductById(id).then(res.send(200, 'Product'+ id +' has been deleted.'))
     
 })
 
