@@ -6,7 +6,18 @@ const router = Router()
 //const socket = io()
 
 // GET  /api/products[?:limit=N] 
-router.get('/', getProductsFromServer )
+
+router.get("/", async(req, res) => {
+    
+    let limit = req.query.limit;
+    if(limit !== undefined){
+        let productArray = await productModel.find().limit(limit).lean().exec();
+        return res.send(productArray)
+    }else{
+        let productArray = await productModel.find().lean().exec();
+        return res.send(productArray)
+    }
+});
 
 // GET 	/api/products/:pid  
 router.get('/:pid', async (req, res) =>{
